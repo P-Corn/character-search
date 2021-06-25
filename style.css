@@ -1,0 +1,66 @@
+body {
+  min-height: 100vh;
+}
+
+.tutorial {
+  text-align: center;
+  margin: auto;
+  background-image: linear-gradient(to right, #093009, #1f6032, #369457);
+}
+
+.tutorial h1 {
+  font-size: 1.5rem;
+}
+
+figure.image {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.character-image {
+  height: 500px;
+  width: auto;
+}
+
+.media-content {
+  margin-left: 3rem;
+}
+
+.notification {
+  margin-top: 20px !important;
+}
+
+.results {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.title .icon {
+  margin-left: 15px;
+}
+
+.hero {
+  margin-bottom: 20px;
+  background-image: linear-gradient(to right, #093009, #1f6032, #369457);
+}
+
+.forms {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown-menu, .dropdown {
+  width: 100%;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.dropdown-item img {
+  height: 60px;
+  margin-right: 10px;
+}
