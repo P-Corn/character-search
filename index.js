@@ -2,7 +2,7 @@ const autoCompleteConfig = {
   root: document.querySelector('#autocomplete'),
   renderOption(character) {
     return `
-      <img src="${character.img}"/>
+      <img src="${character.img}" alt="character image"/>
       ${character.name}
     `
   },
@@ -28,15 +28,25 @@ createAutoComplete(autoCompleteConfig)
 
 const onCharacterSelect = (character, summaryElement) => {
   summaryElement.innerHTML = characterTemplate(character);
+
+  const spoilerBtn = document.querySelector('.spoiler-btn');
+  const characterStatus = document.querySelector('.character-status');
+
+  spoilerBtn.addEventListener('click', () => {
+    spoilerBtn.classList.add('is-hidden');
+    characterStatus.classList.remove('is-hidden');
+  })
 }
 
 const characterTemplate = (character) => {
-  console.log(character)
+  const bbAppearance = character.appearance.length === 0  ? 'None' : character.appearance.join(', ');
+  const bcsAppearance = character.better_call_saul_appearance.length === 0  ? 'None' : character.better_call_saul_appearance.join(', ');
+
   return `
   <article class="columns">
     <div class="column is-two-fifths">
         <p class="image">
-            <img class="character-image" src="${character.img}" />
+            <img class="character-image" src="${character.img}" alt="character image"/>
         </p>
     </div>
     <div class="column">
@@ -52,7 +62,17 @@ const characterTemplate = (character) => {
         <br>
         <article>
           <p class="subtitle is-6">Occupation:</p>
-          <p class="title is-5">${character.occupation}</p>
+          <p class="title is-5">${character.occupation.join(', ')}</p>
+        </article>
+        <br>
+        <article>
+          <p class="subtitle is-6">Breaking Bad Season Appearances:</p>
+          <p class="title is-5">${bbAppearance}</p>
+        </article>
+        <br>
+        <article>
+          <p class="subtitle is-6">Better Call Saul Season Appearances:</p>
+          <p class="title is-5">${bcsAppearance}</p>
         </article>
         <br>
         <article>
@@ -61,16 +81,9 @@ const characterTemplate = (character) => {
         </article>
         <br>
         <article>
-          <p class="subtitle is-6">Breaking Bad Season Appearances:</p>
-          <p class="title is-5">${character.appearance}</p>
-        </article>
-        <br>
-        <article>
-          <p class="subtitle is-6">Better Call Saul Season Appearances:</p>
-          <p class="title is-5">${character.better_call_saul_appearance === true ? 
-            character.better_call_saul_appearance
-          :
-            'None'}</p>
+          <p class="subtitle is-6">Status:</p>
+          <p class="character-status title is-5 mb-0 is-hidden">${character.status}</p>
+          <button class="spoiler-btn button has-background-warning">SHOW SPOILER</button>
         </article>
     </div>
   </article>

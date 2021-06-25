@@ -4,6 +4,12 @@
   background-image: linear-gradient(to right, #093009, #1f6032, #369457);
 }
 
+.main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+
 .tutorial h1 {
   font-size: 1.5rem;
 }
@@ -12,15 +18,6 @@ figure.image {
   display: flex;
   justify-content: center;
   background-color: black;
-}
-
-.character-image {
-  height: 500px;
-  width: auto;
-}
-
-.media-content {
-  margin-left: 3rem;
 }
 
 .notification {
@@ -32,18 +29,15 @@ figure.image {
   overflow-y: scroll;
 }
 
-.title .icon {
+.heisenberg-icon {
   margin-left: 15px;
+  width: auto;
+  height: 60px;
 }
 
 .hero {
   margin-bottom: 20px;
   background-image: linear-gradient(to right, #093009, #1f6032, #369457);
-}
-
-.forms {
-  display: flex;
-  justify-content: space-around;
 }
 
 .dropdown-menu, .dropdown {
