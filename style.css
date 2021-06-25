@@ -1,7 +1,7 @@
 .tutorial {
   text-align: center;
   margin: auto;
-  background-image: linear-gradient(to right, #093009, #1f6032, #369457);
+  background-image: linear-gradient(to right, #093009, #3d6413);
 }
 
 .main-title {
@@ -37,7 +37,7 @@ figure.image {
 
 .hero {
   margin-bottom: 20px;
-  background-image: linear-gradient(to right, #093009, #1f6032, #369457);
+  background-image: linear-gradient(to right, #093009, #3d6413, #c6c61b);
 }
 
 .dropdown-menu, .dropdown {
