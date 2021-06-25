@@ -81,7 +81,7 @@ const characterTemplate = (character) => {
         </article>
         <br>
         <article>
-          <p class="subtitle is-6">Status:</p>
+          <p class="subtitle is-6">Death status:</p>
           <p class="character-status title is-5 mb-0 is-hidden">${character.status}</p>
           <button class="spoiler-btn button has-background-warning">SHOW SPOILER</button>
         </article>
